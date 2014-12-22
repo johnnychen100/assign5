@@ -81,8 +81,8 @@ void mouseMoved() {
 
 void brickMaker(int ox, int oy, int colSpacing, int rowSpacing, int num, int numInRow) {
   for (int i=0; i<num; i++) {
-    int row = i / numInRow;
-    int col = i % numInRow;
+    int row = int(i / numInRow);
+    int col = int(i % numInRow);
     
     int x = ox + (colSpacing*col);
     int y = oy + (rowSpacing*row);
