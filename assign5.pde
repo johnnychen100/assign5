@@ -53,10 +53,12 @@ void draw() {
      
    case GAME_WIN:
      printText("WINNER", "Press ENTER to Continue", 40, 20, 240);
+     reset();
      break;
      
    case GAME_LOSE:
      printText("YOU LOSE", "Pressd ENTER to Restart", 40, 20, 240);
+     reset();
      break;
   }
 }
@@ -201,11 +203,11 @@ void statusCtrl() {
       break;
       
     case GAME_WIN:
-      status = GAME_START;
+      status = GAME_PLAYING;
       break;
     
     case GAME_LOSE:
-      status = GAME_START;
+      status = GAME_PLAYING;
       break;
   }
  } 
